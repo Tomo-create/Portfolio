@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+.keyvisual {
+    position: relative;
+}
+
+.keyvisual img {
+    width: 100%;
+}
+
+.header-menu {
+    position: absolute;
+    list-style: none;
+}
+
+.header-menu li {
+    float: left;
+    padding: 10px 5%;
+    font-size: 4rem;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    width: 90%;
+    min-width: 1000px;
+    margin: auto;
+}
+
+/* ▼タイトル横棒▼ */
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading::before, 
+.heading::after {
+    border-top: 2px solid;
+    content: "";
+    width: 130em; /* 線の長さ */
+}
+.heading::before {
+    margin-right: 10em; /* 文字の右隣 */
+}
+.heading::after {
+    margin-left: 10em; /* 文字の左隣 */
+}
+/* ▲タイトル横棒▲ */
+
+.blank{
+    margin-bottom: 200px;
+}
+
+.heading h1 {
+    top: 30px;
+    left: 50%;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.jaheading h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #595959;
+}
+
+/* ▲ここまで全体的なやつ▲ */
+
+
+.concept-flex {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.concept-flex img{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 35%;
+    min-width: 400px;
+}
+
+.concept-text {
+    margin-right: 5%;
+}
+
+.concept h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.concept p {
+    font-size: 1.5rem;
+    line-height: 5rem;
+    margin-bottom: 25px;
+}
+
+.menu-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.flex-reverse {
+    flex-flow: row-reverse;
+}
+
+.food-menu h2 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+
+.food-menu h2 i{ /* 位置微調整 */
+    padding-right: 10px;
+}
+
+.food-menu p {
+    font-size: 1.5rem;
+}
+
+.food-menu img {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 50%;
+}
+
+.pizza-menu img {
+    border-left: solid 3px #075200;
+}
+
+.pasta-menu img {
+    border-right: solid 3px #d66100;
+}
+
+.wine-menu img {
+    border-left: solid 3px #001f80;
+}
+
+.img-wrap:hover img{
+    opacity: 0.6;
+    transition-duration: 0.3s;
+}
+
+.pizza-menu .menu-text, .wine-menu .menu-text {
+    margin-right: 5%;
+}
+
+.pasta-menu .menu-text {
+    margin-left: 5%;
+}
+
+.pizza-menu h2 {
+    color: #075200;
+}
+
+.pasta-menu h2 {
+    color: #d66100;
+}
+
+.wine-menu h2 {
+    color: #001f80;
+}
+
+.feature-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.feature-flex img {
+    width: 20%;
+    margin: 0 3%;
+}
+
+.access-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.access-text {
+    margin: 1% 5%;
+}
+
+.access-text p {
+    font-size: 2rem;
+}
+
+.access-text span {
+    font-size: 2rem;
+    color: #007300;
+}
+
+.access-text a {
+    font-size: 2rem;
+    color: #0033cc;
+}
+
+/* フッター */
+footer {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.icon img {
+    width: 40px;
+}
+
+footer a {
+    margin: 30px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
