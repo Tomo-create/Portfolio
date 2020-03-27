@@ -5,32 +5,35 @@
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
-.clearfix::after {
+/* .clearfix::after { ヘッダーメニューで使うかも
     content: "";
     display: block;
     clear: both;
-}
+} */
 
 header {
-    margin-bottom: 100px;
+    width: 100%;
+    min-width: 1000px;
+    height: 0;
+    padding-top: calc(778 / 1280 * 100%);
+    background : url(../img/food-on-white-ceramic-plate-near-cloth-1435903-resized.jpg) center center / cover no-repeat;
+    margin-bottom: 200px;
 }
 
-.keyvisual {
-    position: relative;
-}
-
+/* 背景画像に設定してるから保留
 .keyvisual img {
     width: 100%;
-}
+} */
 
 .header-menu {
-    position: absolute;
+    display: flex;
+    justify-content: center;
     list-style: none;
 }
 
 .header-menu li {
-    float: left;
-    padding: 10px 5%;
+    /* float: left; */
+    margin: 10px 20px;
     font-size: 4rem;
 }
 
@@ -114,6 +117,36 @@ main {
     line-height: 5rem;
     margin-bottom: 25px;
 }
+
+/* ▼鍵カッコ▼ */
+.concept-text {
+    position: relative;
+    padding:0.25em 1em;
+}
+.concept-text:before,.concept-text:after{ 
+    content:'';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.concept-text:before{
+    border-left: solid 1px #fcba03;
+    border-top: solid 1px #fcba03;
+    top:0;
+    left: 0;
+}
+.concept-text:after{
+    border-right: solid 1px #fcba03;
+    border-bottom: solid 1px #fcba03;
+    bottom:0;
+    right: 0;
+}
+.concept-text p {
+    margin: 0; 
+    padding: 0;
+}
+/* ▲鍵カッコ▲ */
 
 .menu-flex {
     display: flex;
@@ -202,16 +235,16 @@ main {
 }
 
 .access-text p {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .access-text span {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #007300;
 }
 
 .access-text a {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #0033cc;
 }
 
