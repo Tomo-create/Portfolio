@@ -12,18 +12,18 @@
 } */
 
 header {
+    /* キービジュアルを背景に設定するとき用
     width: 100%;
     min-width: 1000px;
     height: 0;
     padding-top: calc(778 / 1280 * 100%);
-    background : url(../img/food-on-white-ceramic-plate-near-cloth-1435903-resized.jpg) center center / cover no-repeat;
+    background : url(../img/food-on-white-ceramic-plate-near-cloth-1435903-resized.jpg) center center / cover no-repeat; */
     margin-bottom: 200px;
 }
 
-/* 背景画像に設定してるから保留
 .keyvisual img {
     width: 100%;
-} */
+}
 
 .header-menu {
     display: flex;
@@ -32,14 +32,20 @@ header {
 }
 
 .header-menu li {
-    /* float: left; */
-    margin: 10px 20px;
+    margin-top: 30px;
     font-size: 4rem;
+    height: 50px;
+    line-height: 45px; /* 垂直方向中央揃え */
 }
 
-.header-menu li a {
+.header-menu a {
+    margin: 0 30px;
     text-decoration: none;
-    color: #000;
+    color: rgb(119, 119, 119);
+}
+
+.header-menu li+ li {
+    border-left: 1px solid rgb(80, 80, 80);
 }
 
 main {
@@ -59,6 +65,7 @@ main {
     border-top: 2px solid;
     content: "";
     width: 130em; /* 線の長さ */
+    color: #252525;
 }
 .heading::before {
     margin-right: 10em; /* 文字の右隣 */
@@ -69,7 +76,7 @@ main {
 /* ▲タイトル横棒▲ */
 
 .blank{
-    margin-bottom: 200px;
+    margin-bottom: 270px;
 }
 
 .heading h1 {
@@ -77,13 +84,14 @@ main {
     left: 50%;
     font-size: 5rem;
     text-align: center;
+    color: #252525;
 }
 
 .jaheading h1{
     font-size: 2rem;
     text-align: center;
     margin-bottom: 50px;
-    color: #595959;
+    color: #7a7a7a;
 }
 
 /* ▲ここまで全体的なやつ▲ */
@@ -134,13 +142,13 @@ main {
     border-left: solid 1px #fcba03;
     border-top: solid 1px #fcba03;
     top:0;
-    left: 0;
+    left: -10px;
 }
 .concept-text:after{
     border-right: solid 1px #fcba03;
     border-bottom: solid 1px #fcba03;
     bottom:0;
-    right: 0;
+    right: -10px;
 }
 .concept-text p {
     margin: 0; 
@@ -215,13 +223,59 @@ main {
     color: #001f80;
 }
 
+/* 廃案だけど一応とってある */
+/* .menu-text h2 {
+    position: relative;
+    padding:0.25em 1em;
+}
+.menu-text h2::after {
+    content: "";
+    border-bottom: 1px solid #aaa;
+    width: 200px;
+    height: 0px;
+    position: absolute;
+    display: inline-block;
+    bottom: 40px;
+    left: 20px;
+} */
+
+/* ▼鍵カッコ▼ */
+/* .menu-text {
+    position: relative;
+    padding:0.25em 1em;
+}
+.menu-text:before,.menu-text:after{ 
+    content:'';
+    width: 120px;
+    height: 0px;
+    position: absolute;
+    display: inline-block;
+}
+.menu-text:before{
+    border-left: solid 1px #aaa;
+    border-top: solid 1px #aaa;
+    top:30px;
+    left: auto;
+}
+.menu-text:after{
+    border-right: solid 1px #aaa;
+    border-bottom: solid 1px #aaa;
+    bottom: -35px;
+    right: auto;
+}
+.menu-text p {
+    margin: 0;
+    padding: 0;
+} */
+/* ▲鍵カッコ▲ */
+
 .feature-flex {
     display: flex;
     justify-content: center;
 }
 
 .feature-flex img {
-    width: 20%;
+    width: 25%;
     margin: 0 3%;
 }
 
