@@ -12,40 +12,44 @@
 } */
 
 header {
+    margin-bottom: 100px;
     /* キービジュアルを背景に設定するとき用
     width: 100%;
     min-width: 1000px;
     height: 0;
     padding-top: calc(778 / 1280 * 100%);
     background : url(../img/food-on-white-ceramic-plate-near-cloth-1435903-resized.jpg) center center / cover no-repeat; */
-    margin-bottom: 200px;
-}
-
-.keyvisual img {
-    width: 100%;
 }
 
 .header-menu {
+    background: rgba(233, 255, 231, 0.5);
     display: flex;
     justify-content: center;
     list-style: none;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.2);
 }
 
 .header-menu li {
-    margin-top: 30px;
+    margin: 10px 0 7px;
     font-size: 4rem;
     height: 50px;
     line-height: 45px; /* 垂直方向中央揃え */
 }
 
 .header-menu a {
-    margin: 0 30px;
+    margin: 0 50px;
     text-decoration: none;
     color: rgb(119, 119, 119);
 }
 
 .header-menu li+ li {
-    border-left: 1px solid rgb(80, 80, 80);
+    border-left: 1px solid #555;
+}
+
+.keyvisual img {
+    width: 100%;
 }
 
 main {
@@ -93,6 +97,41 @@ main {
     margin-bottom: 50px;
     color: #7a7a7a;
 }
+
+/* ▼ヘッダーメニューと被らないように▼ */
+article {
+    padding-top: 60px;
+}
+
+/* #concept::before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin-top: -8rem;
+    visibility: hidden;
+}
+#menu::before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin-top: -8rem;
+    visibility: hidden;
+}
+#feature::before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin-top: -8rem;
+    visibility: hidden;
+}
+#access::before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin-top: -8rem;
+    visibility: hidden;
+} */
+/* ▲ヘッダーメニューと被らないように▲ */
 
 /* ▲ここまで全体的なやつ▲ */
 
@@ -171,7 +210,6 @@ main {
     text-align: center;
 }
 
-
 .food-menu h2 i{ /* 位置微調整 */
     padding-right: 10px;
 }
@@ -183,7 +221,12 @@ main {
 .food-menu img {
     margin-left: 5%;
     margin-right: 5%;
-    width: 50%;
+    width: 90%;
+}
+
+.food-menu img:hover{
+    opacity: 0.6;
+    transition-duration: 0.3s;
 }
 
 .pizza-menu img {
@@ -198,16 +241,14 @@ main {
     border-left: solid 3px #001f80;
 }
 
-.img-wrap:hover img{
-    opacity: 0.6;
-    transition-duration: 0.3s;
-}
 
 .pizza-menu .menu-text, .wine-menu .menu-text {
+    width: 60%;
     margin-right: 5%;
 }
 
 .pasta-menu .menu-text {
+    width: 60%;
     margin-left: 5%;
 }
 
@@ -274,9 +315,18 @@ main {
     justify-content: center;
 }
 
-.feature-flex img {
-    width: 25%;
+.feature-flex a {
     margin: 0 3%;
+    width: 25%;
+}
+
+.feature-flex img {
+    width: 100%;
+}
+
+.feature-flex a:hover {
+    opacity: 0.6;
+    transition-duration: 0.3s;
 }
 
 .access-flex {
