@@ -98,43 +98,10 @@ main {
     color: #7a7a7a;
 }
 
-/* ▼ヘッダーメニューと被らないように▼ */
-article {
+
+article {/* ▼ヘッダーメニューと被らないように▼ */
     padding-top: 60px;
 }
-
-/* #concept::before {
-    content: "";
-    display: block;
-    height: 8rem;
-    margin-top: -8rem;
-    visibility: hidden;
-}
-#menu::before {
-    content: "";
-    display: block;
-    height: 8rem;
-    margin-top: -8rem;
-    visibility: hidden;
-}
-#feature::before {
-    content: "";
-    display: block;
-    height: 8rem;
-    margin-top: -8rem;
-    visibility: hidden;
-}
-#access::before {
-    content: "";
-    display: block;
-    height: 8rem;
-    margin-top: -8rem;
-    visibility: hidden;
-} */
-/* ▲ヘッダーメニューと被らないように▲ */
-
-/* ▲ここまで全体的なやつ▲ */
-
 
 .concept-flex {
     display: flex;
@@ -143,14 +110,14 @@ article {
 }
 
 .concept-flex img{
-    margin-left: 5%;
+    margin-left: 3%;
     margin-right: 5%;
     width: 35%;
     min-width: 400px;
 }
 
 .concept-text {
-    margin-right: 5%;
+    margin-right: 3%;
 }
 
 .concept h2 {
@@ -180,7 +147,7 @@ article {
 .concept-text:before{
     border-left: solid 1px #fcba03;
     border-top: solid 1px #fcba03;
-    top:0;
+    top:60px;
     left: -10px;
 }
 .concept-text:after{
@@ -189,16 +156,12 @@ article {
     bottom:0;
     right: -10px;
 }
-.concept-text p {
-    margin: 0; 
-    padding: 0;
-}
 /* ▲鍵カッコ▲ */
 
 .menu-flex {
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .flex-reverse {
@@ -210,8 +173,8 @@ article {
     text-align: center;
 }
 
-.food-menu h2 i{ /* 位置微調整 */
-    padding-right: 10px;
+.food-menu h2 i{/* 位置微調整 */
+    padding-right: 20px;
 }
 
 .food-menu p {
@@ -219,14 +182,15 @@ article {
 }
 
 .food-menu img {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 55%;
 }
 
 .food-menu img:hover{
     opacity: 0.6;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .pizza-menu img {
@@ -264,50 +228,83 @@ article {
     color: #001f80;
 }
 
-/* 廃案だけど一応とってある */
-/* .menu-text h2 {
-    position: relative;
-    padding:0.25em 1em;
-}
-.menu-text h2::after {
-    content: "";
-    border-bottom: 1px solid #aaa;
-    width: 200px;
-    height: 0px;
-    position: absolute;
-    display: inline-block;
-    bottom: 40px;
-    left: 20px;
-} */
-
 /* ▼鍵カッコ▼ */
-/* .menu-text {
+.pizza-menu>.menu-text {
     position: relative;
     padding:0.25em 1em;
 }
-.menu-text:before,.menu-text:after{ 
+.pizza-menu>.menu-text:before,
+.pizza-menu>.menu-text:after{ 
     content:'';
-    width: 120px;
-    height: 0px;
+    width: 50px;
+    height: 30px;
     position: absolute;
     display: inline-block;
 }
-.menu-text:before{
-    border-left: solid 1px #aaa;
-    border-top: solid 1px #aaa;
-    top:30px;
-    left: auto;
+.pizza-menu>.menu-text:before{
+    border-left: solid 1px #075200;
+    border-top: solid 1px #075200;
+    top:80px;
+    left: -20px;
 }
-.menu-text:after{
-    border-right: solid 1px #aaa;
-    border-bottom: solid 1px #aaa;
-    bottom: -35px;
-    right: auto;
+.pizza-menu>.menu-text:after{
+    border-right: solid 1px #075200;
+    border-bottom: solid 1px #075200;
+    bottom:-15px;
+    right: -10px;
 }
-.menu-text p {
-    margin: 0;
-    padding: 0;
-} */
+
+/* ▼PASTA▼ */
+.pasta-menu>.menu-text {
+    position: relative;
+    padding:0.25em 1em;
+}
+.pasta-menu>.menu-text:before,
+.pasta-menu>.menu-text:after{ 
+    content:'';
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.pasta-menu>.menu-text:before{
+    border-left: solid 1px #d66100;
+    border-top: solid 1px #d66100;
+    top:80px;
+    left: -20px;
+}
+.pasta-menu>.menu-text:after{
+    border-right: solid 1px #d66100;
+    border-bottom: solid 1px #d66100;
+    bottom:-15px;
+    right: -10px;
+}
+
+/* ▼WINE▼ */
+.wine-menu>.menu-text {
+    position: relative;
+    padding:0.25em 1em;
+}
+.wine-menu>.menu-text:before,
+.wine-menu>.menu-text:after{ 
+    content:'';
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.wine-menu>.menu-text:before{
+    border-left: solid 1px #001f80;
+    border-top: solid 1px #001f80;
+    top:80px;
+    left: -20px;
+}
+.wine-menu>.menu-text:after{
+    border-right: solid 1px #001f80;
+    border-bottom: solid 1px #001f80;
+    bottom:-15px;
+    right: -10px;
+}
 /* ▲鍵カッコ▲ */
 
 .feature-flex {
@@ -315,18 +312,15 @@ article {
     justify-content: center;
 }
 
-.feature-flex a {
-    margin: 0 3%;
-    width: 25%;
-}
-
 .feature-flex img {
-    width: 100%;
+    margin: 0 3%;
+    width: 27%;
 }
 
-.feature-flex a:hover {
+.feature-flex img:hover {
     opacity: 0.6;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .access-flex {
@@ -354,8 +348,7 @@ article {
 
 /* フッター */
 footer {
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding: 30px 0 20px;
     background-color: #f0f0f0;
 }
 
